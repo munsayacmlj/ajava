@@ -7,8 +7,6 @@ public class Main {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-//        Inventory inventory = (Inventory)SystemFactory.getSystem("inventory");
-//        inventory.displayItems();
         Main main = new Main();
 
         System.out.println("What would you like to do? ");
@@ -16,9 +14,20 @@ public class Main {
         System.out.println("2. Bank");
 
         int choice = scan.nextInt();
-        if (choice == 1) {
-            main.initInventory();
+        switch (choice) {
+            case 1: main.initInventory();
+                    break;
+            case 2: main.initBank();
+                    break;
+            default: break;
         }
+    }
+
+    public void  initBank() {
+        Bank bank = (Bank) SystemFactory.getSystem("bank");
+        bank.setSystemName("Bank of Mark");
+        System.out.println(bank.getSystemName());
+        System.out.println(bank.getAddress());
     }
 
     public void initInventory() {
@@ -50,12 +59,15 @@ public class Main {
     }
 
     public static void displayChoices() {
-        String newLine = System.getProperty("line.separator");//This will retrieve line separator dependent on OS.
         System.out.println("\n");
         System.out.println("1. Display all items");
         System.out.println("2. Add new item");
         System.out.println("3. Delete existing item");
         System.out.println("4. Exit");
         System.out.println("\n");
+    }
+
+    public static void shopChoices() {
+        
     }
 }

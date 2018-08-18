@@ -10,7 +10,7 @@ public class Inventory extends Sistema implements CRUD {
     private String name;
     private static final String ADDRESS = "40 Birch Hill St. \n" +
                                                 "Saint Johns, FL 32259";
-    private static Map<String, Integer> storageItems = new HashMap<>();
+    private static Map<String, Object> storageItems = new HashMap<>();
 
     Inventory() {
         Item item1 = new Item("Apple");
