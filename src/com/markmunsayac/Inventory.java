@@ -13,12 +13,12 @@ public class Inventory extends Sistema implements CRUD {
     private static Map<String, Object> storageItems = new HashMap<>();
 
     Inventory() {
-        Item item1 = new Item("Apple");
+        Item item1 = new Item.Builder().setItemName("Apple").build();
         storageItems.put(item1.getItemName(), 5);
-        Item item2 = new Item("Banana");
-        storageItems.put(item2.getItemName(), 3);
-        Item item3 = new Item("Mango");
-        storageItems.put(item3.getItemName(), 1);
+//        Item item2 = new Item("Banana");
+//        storageItems.put(item2.getItemName(), 3);
+//        Item item3 = new Item("Mango");
+//        storageItems.put(item3.getItemName(), 1);
     }
 
     @Override

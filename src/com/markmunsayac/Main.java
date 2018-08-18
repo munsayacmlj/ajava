@@ -1,6 +1,9 @@
 package com.markmunsayac;
 
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+
 
 public class Main {
 
@@ -38,7 +41,7 @@ public class Main {
         do {
             switch (choice) {
                 case 1: inventory.displayItems();
-                    break;
+                         break;
                 case 2:
                     System.out.print("Enter new item name: ");
                     String newItem = scan.next();
@@ -68,6 +71,12 @@ public class Main {
     }
 
     public static void shopChoices() {
-        
+        System.out.println("\n");
+        System.out.println("1. Add to Cart");
+        System.out.println("2. Remove From Cart");
+        System.out.println("3. View Cart");
+        System.out.println("4. Checkout");
+        System.out.println("5. Back");
+        System.out.println("\n");
     }
 }
